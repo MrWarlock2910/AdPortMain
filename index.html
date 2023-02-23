@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JV Test</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+  <script>
+    let numPeople = 0;
+    // rest of the code
+  </script>
+  
+  
+  <style>
+  .question {
+    font-size: 15px;
+    font-family: Verdana;
+  }
+
+  textarea {
+    font-size: 15px;
+    font-family: Verdana;
+  }
+
+  input{
+    font-size: 15px;
+    font-family: Verdana;
+  }
+
+  button {
+    font-size: 15px;
+    font-family: Verdana;
+  }
+
+  body {
+    background-color:cornsilk;
+    height: 100%;
+  }
+
+  .option {
+    font-size: 15px;
+    font-family: Verdana;
+    height: 15px;
+  }
+  </style>
+</head>
+<body>
+    <div class="container-fluid">
+      <div class="row" style="height: 100%;">
+        <div class="col-md-6" style="border-right: 1px black solid;">
+          <form class="m-4" style="background-color: aliceblue;padding: 32px; border: 1px grey solid;box-shadow: 2px 2px 2px grey;border-radius: 25px;" >
+            <table align="center">
+              <tr>
+                <tr align="center">
+                  <th><h4 class="h4 text-center">Schedule Interview</h4></th>
+                </tr>
+                <td>
+                  <label for="interview">Interview title</label>
+                </td>
+                <td>
+                  <input type="text" name="interview" id="interview" required autofocus/>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="start">Start</label>
+                </td>
+                <td>
+                  <input type="time" name="start" id="start" required/>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="end">End</label>
+                </td>
+                <td>
+                  <input type="time" name="end" id="end" required />
+                </td>
+              </tr>
+              <tr colspan="2">
+                <td align="center">
+                  <span id="people">
+                    <select accesskey="people" title="Select Candidates"></select>
+                  </span>
+                </td>
+              </tr>
+              <tr colspan="2">
+                <td align="center">
+                  <button type="button" onclick="addPeopleSpace()" class="btn btn-primary">Add Person</button>.
+                  <button type="submit" class="btn btn-secondary">Submit</button>
+                </td>
+              </tr>
+              
+            </table>
+            
+            
+          </form>
+
+
+          <form class="m-4" style="background-color: aliceblue;padding: 32px; border: 1px grey solid;box-shadow: 2px 2px 2px grey;border-radius: 25px;" >
+            <table align="center">
+              <tr align="center">
+                  <th><h4 class="h4 text-center">Machine Learning Engineer Interview</h4></th>
+                </tr>
+              
+                
+              <tr colspan="2">
+                <td>
+                  <label for="start">Start</label>
+                </td>
+                
+              </tr>
+              <tr colspan="2">
+                <td>
+                  <label for="end">End</label>
+                </td>
+               
+                
+              </tr>
+              <tr>
+                <button type="button" class="btn btn-warning">Edit</button>
+                
+              </tr>
+                
+              </tr>
+              
+             
+              
+            </table>
+            
+            
+          </form>
+        </div>
+        
+        
+        <div class="col-md-6">
+          <div class="card m-4">
+            <div class="row" >
+              <div class="col-md-4">
+                <img src="/assets/personImage.jpg" class="img-fluid rounded-start"  alt="userImage"><br>
+                <input type="file" class="form-control form-control-md"  placeholder="Select image"/>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <form>
+                    <h6 class="card-title"<label for="applicantName">Name of person</label><input type="text" name="applicantName" id="applicantName" placeholder="Enter Name" required /><br></h6>
+                    <h6 class="card-title"<label for="applicantEmail">Email of the person</label><input placeholder="Enter Email" type="text" name="applicantEmail" id="applicantEmail" required /><br></h6>
+                    <button type="button" class="btn btn-primary">Save</button><button type="button" class="btn btn-secondary">Delete</button>
+                  </form>
+              </div>
+              </div>
+            </div>
+          </div>
+            <div class="card m-4">
+              <div class="row" >
+                <div class="col-md-4">
+                  <img src="/assets/personImage.jpg" class="img-fluid rounded-start"  alt="userImage"><br>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h6 class="card-title">Prabhas kumar<br></h6>
+                    <h6 class="card-title">pk.talli@hotmail.com<br></h6>
+                    <button type="button" class="btn btn-warning">Edit</button>
+                  </div>
+                </div>
+              </div>
+              </div>
+          
+        </div>
+      </div>
+    </div>
+  <div class="questions" id="questions"></div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const pplSpace = document.getElementById('people')
+    function addPeopleSpace() {
+      pplSpace.innerText+="";
+    }
+
+  var questionNo = 1;
+  var que = [];
+  var o1 = [];
+  var o2 = [];
+  var o3 = [];
+  var o4 = [];
+
+  var tque = [];
+  var to1 = [];
+  var to2 = [];
+  var to3 = [];
+  var to4 = [];
+
+    var socket = io();
+    socket.on("this", function(data){
+      que = data.question;
+      o1 = data.option1;
+      o2 = data.option2;
+      o3 = data.option3;
+      o4 = data.option4;
+      if (que.length>0) {
+        questionNo = que.length;
+      } else {
+        questionNo = 1;
+      }
+      setArray(0);
+    });
+
+    socket.on("thisisit", function(data){
+      que = data.question;
+      o1 = data.option1;
+      o2 = data.option2;
+      o3 = data.option3;
+      o4 = data.option4;
+      questionNo = que.length;
+      setArray(0);
+    });
+
+    var questions = document.getElementById('questions');
+    function addQue() {
+      makeArray();
+      questionNo++;
+      setArray(1);
+    }
+
+    function sub() {
+      if (questions.innerHTML == '') {
+        que = [];
+        o1 = [];
+        o2 = [];
+        o3 = [];
+        o4 = [];
+      }
+      makeArray();
+      socket.emit('submission', {question: que, option1:o1, option2:o2, option3:o3, option4:o4});
+    }
+
+    function makeArray() {
+      que = [''];
+      o1 = [''];
+      o2 = [''];
+      o3 = [''];
+      o4 = [''];
+      for (var i = 1; i < questionNo; i++) {
+        if((document.getElementById('qn' + i).value=='')&&(document.getElementById('q'+ i + 'op1').value=='')&&(document.getElementById('q'+ i + 'op2').value=='')&&(document.getElementById('q'+ i + 'op3').value=='')&&(document.getElementById('q'+ i + 'op4').value==''))
+          continue;
+        que[i] = document.getElementById('qn' + i).value;
+        o1[i] = document.getElementById('q'+ i + 'op1').value;
+        o2[i] = document.getElementById('q'+ i + 'op2').value;
+        o3[i] = document.getElementById('q'+ i + 'op3').value;
+        o4[i] = document.getElementById('q'+ i + 'op4').value;
+      }
+    }
+
+    function setArray(x) {
+      addQuestionStructure(0);
+      for (var i = 1; i < questionNo; i++) {
+        if((que[i]=='')&&(o1[i]=='')&&(o2[i]=='')&&(o3[i]=='')&&(o4[i]==''))
+          continue;
+        addQuestionStructure(i);
+      }
+
+      for (var i = 1; i < questionNo-x; i++) {
+        if((que[i]=='')&&(o1[i]=='')&&(o2[i]=='')&&(o3[i]=='')&&(o4[i]==''))
+          continue;
+        document.getElementById('qn' + i).value = que[i];
+        document.getElementById('q'+ i + 'op1').value = o1[i];
+        document.getElementById('q'+ i + 'op2').value = o2[i];
+        document.getElementById('q'+ i + 'op3').value = o3[i];
+        document.getElementById('q'+ i + 'op4').value = o4[i];
+      }
+    }
+
+    function deleteTheQuestion(index) {
+      makeArray();
+      que[index] = "";
+      o1[index] = "";
+      o2[index] = "";
+      o3[index] = "";
+      o4[index] = "";
+      document.getElementById('qn' + index).value = '';
+      document.getElementById('q'+ index + 'op1').value = '';
+      document.getElementById('q'+ index + 'op2').value = '';
+      document.getElementById('q'+ index + 'op3').value = '';
+      document.getElementById('q'+ index + 'op4').value = '';
+    }
+
+    function addQuestionStructure(queNo) {
+      if (queNo == 0) {
+        questions.innerHTML = "";
+      } else {
+        questions.innerHTML += '<div class="question'+queNo+'"><span class="queNo" id="qN">'+queNo+'</span><textarea cols="100" id="qn'+queNo+'" class="question"></textarea><br><br>A.<textarea cols="50" id="q'+queNo+'op1" class="option"></textarea><br>B.<textarea cols="50" id="q'+queNo+'op2" class="option"></textarea><br>C.<textarea cols="50" id="q'+queNo+'op3" class="option"></textarea><br>D.<textarea cols="50" id="q'+queNo+'op4" class="option"></textarea><br><button onclick="deleteTheQuestion('+queNo+')">Delete This Question</button></div><br><br>';
+      }
+    }
+  </script>
+</body>
+</html>
